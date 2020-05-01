@@ -1,5 +1,5 @@
-@echo off
-Title Batch to VBS Converter 0.2 
+echo off
+Title Batch to VBS Converter 0.3 
 set cd=%cd%
 set t=%temp%
 goto eleminar
@@ -8,7 +8,7 @@ color b
 set codevbs1=ar.writeline "
 set codevbs2="
 echo.
-echo  Escribe el nombre del bat a cambiar a vbs + el formato ".bat o .cmd"
+echo  Type the Name of the BAT file to convert. (In the format ".bat" / ".cmd")
 echo.
 set /p batavbs= ^>^>^> 
 if not exist %batavbs% (goto:err)
@@ -45,7 +45,7 @@ del "%t%\batavbs.txt"
 cls
 color a 
 echo.
-echo Proceso terminado .  yyy y  PUT0 EL QUE LO LEA  jajaja
+echo Process finished. and fucking whoever reads it. hahaha
 echo.
 if exist "%t%\bat.txt" del "%t%\bat.txt"
 if exist "%t%\batavbs.txt" del "%t%\batavbs.txt"
@@ -66,16 +66,18 @@ goto vbs
 cls
 color c
 echo.
-echo EL ARCHIVO QUE ESCRIBISTE NO EXISTE PERRO
+echo File not found verifies the fucking name.
 ECHO.
 pause & exit
  
 :remplace
 setlocal enabledelayedexpansion
+set newline=^& echo.
 for /f "tokens=* delims=" %%x in ('type %t%\bat.txt') do (
 set linea=%%x
 set linea=!linea:%%=%%%%!
 set linea=!linea:"=""!
+set linea=!linea:^&=" : ar.writeline "!
 call :show !linea!
 )
 goto:eof
