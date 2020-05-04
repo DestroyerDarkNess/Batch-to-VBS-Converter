@@ -11,7 +11,7 @@ echo/ & echo Hi, guys. & echo/
 pause & exit
 ```
 
- ---------------- After (example.bat):
+ ---------------- After (example.vbs):
  
  ```batchfile
 Const TemporaryFolder = 2
