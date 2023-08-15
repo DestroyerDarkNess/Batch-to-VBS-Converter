@@ -29,7 +29,6 @@ ar.writeline " echo/ " : ar.writeline " echo Hi, guys. " : ar.writeline " echo/ 
 ar.writeline " pause " : ar.writeline " exit  "
 ar.close
 b.run tempFolder & "archivo.bat", 1, true
-'Create By Salvador F. Krilewski.
 ```
 
 Remastered Tool "Code Smart | Script IDE With Avanced Tools" : [Official Page Code Smart](https://toolslib.net/downloads/viewdownload/631-code-smart/)
