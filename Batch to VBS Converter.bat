@@ -38,7 +38,7 @@ type "%t%\temp.vbs
 (
 echo ar^.close
 echo b^.run tempFolder ^& "archivo.bat"^, ^1, true
-echo ^'Create By Salvador F. Krilewski.
+echo ^'Create By Destroyer.
 ) >> %t%\temp.vbs
 copy "%t%\temp.vbs" "%cd%\%batavbs%Converted.vbs"
 del "%t%\batavbs.txt"
